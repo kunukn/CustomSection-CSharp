@@ -8,7 +8,9 @@ namespace ConsoleApplication
 		{
 			MyInstanceElement myInstanceElement = MyConfig.Instance.Get("name1");
 
-			Console.WriteLine(myInstanceElement.ToString());
+			Console.WriteLine(myInstanceElement);
+			Console.WriteLine(MyConfig.Instance.Get("name2"));
+
 			Console.WriteLine("press a key to exit..");
 			Console.ReadKey();
 		}
