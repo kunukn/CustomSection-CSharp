@@ -10,9 +10,7 @@ Implementation example with list of elements
 Custom sections examples
 ------------------------
 
-
-
-
+Example 1
 ```
 <myConfiguration>
    <add name="name1" connectionName="conn1" fileDir="path1" baseUrl="baseUrl1" />
@@ -20,8 +18,7 @@ Custom sections examples
 </myConfiguration>	
 ```
 
-
-From http://stackoverflow.com/questions/1316058/how-to-create-custom-config-section-in-app-config
+Example 2
 ```
 <RegisterCompanies id="1">
    <Companies>
@@ -31,7 +28,7 @@ From http://stackoverflow.com/questions/1316058/how-to-create-custom-config-sect
 </RegisterCompanies>
 ```
 
-From http://www.thecodingforums.com/threads/nested-configurationelementcollections.118146/
+Example 3
 ```
 <SiteSettings>
 	<site name="develop" smtp="smtp.develop.com" host="localhost">
@@ -47,6 +44,6 @@ From http://www.thecodingforums.com/threads/nested-configurationelementcollectio
 		</mappings>
 	</site>
 </SiteSettings>
-	```
+```
 
 
