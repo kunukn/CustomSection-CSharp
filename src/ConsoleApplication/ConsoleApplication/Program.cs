@@ -13,7 +13,7 @@ namespace ConsoleApplication
 			var example01 = Code.Example01.CustomSection.GetConfig();
 			foreach (var element in example01.Customs)
 			{
-				Console.WriteLine(element as CustomElement);
+				Console.WriteLine(element as Code.Example01.CustomElement);
 			}
 			
 			Console.WriteLine("\nExample 02");
@@ -21,22 +21,22 @@ namespace ConsoleApplication
 			Console.WriteLine("Id: {0}", example02.Id);
 			foreach (var element in example02.Companies)
 			{
-				Console.WriteLine(element as Company);
+				Console.WriteLine(element as Code.Example02.Company);
 			}
 
 			Console.WriteLine("\nExample 03");
-			var siteSection = Code.Example03.CustomSection.GetConfig();
+			var example03 = Code.Example03.CustomSection.GetConfig();
 
-			foreach (var site in siteSection.Sites)
+			foreach (var site in example03.Sites)
 			{
-				var siteElement = site as SiteElement;
+				var siteElement = site as Code.Example03.SiteElement;
 				Console.WriteLine(siteElement);
 
 				if (siteElement != null)
 				{
 					foreach (var mapping in siteElement.Mappings)
 					{
-						var membershipElement = mapping as MembershipElement;
+						var membershipElement = mapping as Code.Example03.MembershipElement;
 						Console.WriteLine(membershipElement);
 					}
 				}

@@ -42,8 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Example02\Companies.cs" />
-    <Compile Include="Code\Example02\Company.cs" />
     <Compile Include="Code\Example02\CustomSection.cs" />
     <Compile Include="Code\Example01\CustomSection.cs" />
     <Compile Include="Code\Example03\CustomSection.cs" />
