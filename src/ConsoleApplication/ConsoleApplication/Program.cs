@@ -19,7 +19,7 @@ namespace ConsoleApplication
 			{
 				Console.WriteLine(element as Code.Example02.CustomElement);
 			}
-			
+
 			Console.WriteLine("\nExample 03");
 			var example03 = Code.Example03.CustomSection.GetConfig();
 			Console.WriteLine("Id: {0}", example03.Id);
@@ -40,7 +40,25 @@ namespace ConsoleApplication
 				{
 					foreach (var mapping in element.Types)
 					{
-						Console.WriteLine(mapping as Code.Example04.TypeElement);
+						Console.WriteLine("  {0}", (mapping as Code.Example04.TypeElement));
+					}
+				}
+			}
+
+			Console.WriteLine("\nExample 05");
+			var example05 = Code.Example05.CustomSection.GetConfig();
+			Console.WriteLine(example05.ActiveBranch);
+
+			foreach (var site in example05.Toggleses)
+			{
+				var element = site as Code.Example05.TogglesElement;
+				Console.WriteLine(element);
+
+				if (element != null)
+				{
+					foreach (var mapping in element)
+					{
+						Console.WriteLine("  {0}", (mapping as Code.Example05.ToggleElement));
 					}
 				}
 			}
