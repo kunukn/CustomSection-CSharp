@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcmeConfig.cs" />
-    <Compile Include="AcmeConfigSection.cs" />
+    <Compile Include="MyConfig.cs" />
+    <Compile Include="MyConfigSection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

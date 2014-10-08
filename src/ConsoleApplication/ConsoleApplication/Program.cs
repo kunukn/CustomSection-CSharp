@@ -6,9 +6,9 @@ namespace ConsoleApplication
 	{
 		static void Main(string[] args)
 		{
-			AcmeInstanceElement data = new AcmeConfig().Instances("ERCOT");
+			MyInstanceElement myInstanceElement = MyConfig.Instance.Get("name1");
 
-			Console.WriteLine(data.ToString());
+			Console.WriteLine(myInstanceElement.ToString());
 			Console.WriteLine("press a key to exit..");
 			Console.ReadKey();
 		}

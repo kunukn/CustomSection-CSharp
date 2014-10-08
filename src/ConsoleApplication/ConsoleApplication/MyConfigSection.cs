@@ -2,27 +2,27 @@
 
 namespace ConsoleApplication
 {
-	public class AcmeConfigSection : ConfigurationSection
+	public class MyConfigSection : ConfigurationSection
 	{
 		[ConfigurationProperty("", IsRequired = true, IsDefaultCollection = true)]
-		public AcmeInstanceCollection Instances
+		public MyInstanceCollection MyInstances
 		{
-			get { return (AcmeInstanceCollection)this[""]; }
+			get { return (MyInstanceCollection)this[""]; }
 			set { this[""] = value; }
 		}
 	}
-	public class AcmeInstanceCollection : ConfigurationElementCollection
+	public class MyInstanceCollection : ConfigurationElementCollection
 	{
 		protected override ConfigurationElement CreateNewElement()
 		{
-			return new AcmeInstanceElement();
+			return new MyInstanceElement();
 		}
 		protected override object GetElementKey(ConfigurationElement element)
 		{
-			return ((AcmeInstanceElement)element).Name;
+			return ((MyInstanceElement)element).Name;
 		}
 	}
-	public class AcmeInstanceElement : ConfigurationElement
+	public class MyInstanceElement : ConfigurationElement
 	{
 		[ConfigurationProperty("name", IsKey = true, IsRequired = true)]
 		public string Name
