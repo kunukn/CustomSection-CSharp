@@ -5,9 +5,9 @@ namespace ConsoleApplication.Code.Example04
 	public class CustomSection : ConfigurationSection
 	{
 		[ConfigurationProperty("", IsDefaultCollection = true)]
-		public SiteCollection Sites
+		public ItemCollection Items
 		{
-			get { return (SiteCollection)base[""]; }
+			get { return (ItemCollection)base[""]; }
 		}
 
 		public static CustomSection GetConfig()
@@ -17,21 +17,21 @@ namespace ConsoleApplication.Code.Example04
 		}
 	}
 
-	public class SiteCollection : ConfigurationElementCollection
+	public class ItemCollection : ConfigurationElementCollection
 	{
-		public new SiteElement this[string name]
+		public new ItemElement this[string name]
 		{
 			get
 			{
 				if (IndexOf(name) < 0) return null;
 
-				return (SiteElement)BaseGet(name);
+				return (ItemElement)BaseGet(name);
 			}
 		}
 
-		public SiteElement this[int index]
+		public ItemElement this[int index]
 		{
-			get { return (SiteElement)BaseGet(index); }
+			get { return (ItemElement)BaseGet(index); }
 		}
 
 		public int IndexOf(string name)
@@ -54,70 +54,70 @@ namespace ConsoleApplication.Code.Example04
 
 		protected override ConfigurationElement CreateNewElement()
 		{
-			return new SiteElement();
+			return new ItemElement();
 		}
 
 		protected override object GetElementKey(ConfigurationElement element)
 		{
-			return ((SiteElement)element).Name;
+			return ((ItemElement)element).Name;
 		}
 
 		protected override string ElementName
 		{
-			get { return "site"; }
+			get { return "item"; }
 		}
 	}
 
-	public class SiteElement : ConfigurationElement
+	public class ItemElement : ConfigurationElement
 	{
-		[ConfigurationProperty("name", DefaultValue = "develop", IsRequired = true, IsKey = true)]
+		[ConfigurationProperty("name", DefaultValue = "", IsRequired = true, IsKey = true)]
 		public string Name
 		{
 			get { return (string)this["name"]; }
 			set { this["name"] = value; }
 		}
 
-		[ConfigurationProperty("smtp", DefaultValue = "mail.develop.com", IsRequired = true, IsKey = false)]
-		public string SmtpServer
+		[ConfigurationProperty("area", DefaultValue = "", IsRequired = false, IsKey = false)]
+		public string Area
 		{
-			get { return (string)this["smtp"]; }
-			set { this["smtp"] = value; }
+			get { return (string)this["area"]; }
+			set { this["area"] = value; }
 		}
 
-		[ConfigurationProperty("host", DefaultValue = "localhost", IsRequired = true, IsKey = false)]
+		[ConfigurationProperty("host", DefaultValue = "", IsRequired = false, IsKey = false)]
 		public string Host
 		{
 			get { return (string)this["host"]; }
 			set { this["host"] = value; }
 		}
 
-		[ConfigurationProperty("mappings", IsDefaultCollection = false)]
-		public MembershipCollection Mappings
+		[ConfigurationProperty("types", IsDefaultCollection = false)]
+		public TypeCollection Types
 		{
-			get { return (MembershipCollection)base["mappings"]; }
+			get { return (TypeCollection)base["types"]; }
 		}
 
 		public override string ToString()
 		{
-			return string.Format("{0}, {1}, {2}", Name, SmtpServer, Host);
+			return string.Format("{0}, {1}, {2}", Name, Area, Host);
 		}
 	}
 
-	public class MembershipCollection : ConfigurationElementCollection
+	public class TypeCollection : ConfigurationElementCollection
 	{
-		public new MembershipElement this[string name]
+		public new TypeElement this[string name]
 		{
 			get
 			{
 				if (IndexOf(name) < 0) return null;
 
-				return (MembershipElement)BaseGet(name);
+				return (TypeElement)BaseGet(name);
 			}
 		}
 
-		public MembershipElement this[int index]
+		public TypeElement this[int index]
 		{
-			get { return (MembershipElement)BaseGet(index); }
+			get { return (TypeElement)BaseGet(index); }
 		}
 
 		public int IndexOf(string name)
@@ -139,21 +139,21 @@ namespace ConsoleApplication.Code.Example04
 
 		protected override ConfigurationElement CreateNewElement()
 		{
-			return new MembershipElement();
+			return new TypeElement();
 		}
 
 		protected override object GetElementKey(ConfigurationElement element)
 		{
-			return ((MembershipElement)element).Name;
+			return ((TypeElement)element).Name;
 		}
 
 		protected override string ElementName
 		{
-			get { return "membership"; }
+			get { return "type"; }
 		}
 	}
 
-	public class MembershipElement : ConfigurationElement
+	public class TypeElement : ConfigurationElement
 	{
 		[ConfigurationProperty("name", DefaultValue = "", IsRequired = true, IsKey = true)]
 		public string Name

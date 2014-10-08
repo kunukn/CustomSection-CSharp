@@ -31,16 +31,16 @@ namespace ConsoleApplication
 			Console.WriteLine("\nExample 04");
 			var example04 = Code.Example04.CustomSection.GetConfig();
 
-			foreach (var site in example04.Sites)
+			foreach (var site in example04.Items)
 			{
-				var element = site as Code.Example04.SiteElement;
+				var element = site as Code.Example04.ItemElement;
 				Console.WriteLine(element);
 
 				if (element != null)
 				{
-					foreach (var mapping in element.Mappings)
+					foreach (var mapping in element.Types)
 					{
-						Console.WriteLine(mapping as Code.Example04.MembershipElement);
+						Console.WriteLine(mapping as Code.Example04.TypeElement);
 					}
 				}
 			}
