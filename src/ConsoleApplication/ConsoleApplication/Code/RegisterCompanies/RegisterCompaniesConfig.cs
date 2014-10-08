@@ -18,6 +18,12 @@ namespace ConsoleApplication.Code.RegisterCompanies
                 object o = this["Companies"];
                 return o as Companies ;
             }
-        }    
+        }
+
+		[ConfigurationProperty("id", IsRequired = false)]
+		public string Id
+		{
+			get { return this["id"] as string; }
+		}
 	}
 }

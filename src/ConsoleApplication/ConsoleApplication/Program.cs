@@ -17,13 +17,12 @@ namespace ConsoleApplication
 
 			Console.WriteLine("\nExample 2");
 			var config = RegisterCompaniesConfig.GetConfig();
+			Console.WriteLine("Id: {0}",config.Id);
 			foreach (var item in config.Companies)
 			{
 				var company = (Company) item;
    				Console.WriteLine(company);		
 			}
-
-
 
 
 			Console.WriteLine("\npress a key to exit..");
