@@ -1,5 +1,5 @@
 ﻿using System;
-using ConsoleApplication.Code.MyConfig;
+using ConsoleApplication.Code.Example01;
 using ConsoleApplication.Code.RegisterCompanies;
 using ConsoleApplication.Code.SiteSettings;
 
@@ -10,12 +10,12 @@ namespace ConsoleApplication
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Example 1");
-			MyInstanceElement myInstanceElement = MyConfig.Instance.Get("name1");
-
-			Console.WriteLine(myInstanceElement);
-			Console.WriteLine(MyConfig.Instance.Get("name2"));
-
-
+			var example1 = CustomSection.GetConfig();
+			foreach (var element in example1.Customs)
+			{
+				Console.WriteLine(element as CustomElement);
+			}
+			
 			Console.WriteLine("\nExample 2");
 			var config = RegisterCompaniesConfig.GetConfig();
 			Console.WriteLine("Id: {0}", config.Id);

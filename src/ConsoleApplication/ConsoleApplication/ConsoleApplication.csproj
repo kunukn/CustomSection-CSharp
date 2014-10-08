@@ -44,15 +44,14 @@
   <ItemGroup>
     <Compile Include="Code\RegisterCompanies\Companies.cs" />
     <Compile Include="Code\RegisterCompanies\Company.cs" />
-    <Compile Include="Code\MyConfig\MyConfig.cs" />
     <Compile Include="Code\RegisterCompanies\RegisterCompaniesConfig.cs" />
-    <Compile Include="Code\MyConfig\MyConfigSection.cs" />
+    <Compile Include="Code\Example01\CustomSection.cs" />
     <Compile Include="Code\SiteSettings\SiteSection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="myConfiguration.config">
+    <None Include="example01.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="SiteSettings.config">
