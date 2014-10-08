@@ -6,7 +6,8 @@ namespace ConsoleApplication.Code.RegisterCompanies
     {
         public static RegisterCompaniesConfig GetConfig()
         {
-            return (RegisterCompaniesConfig)ConfigurationManager.GetSection("RegisterCompanies");
+			var section  = ConfigurationManager.GetSection("example02");
+	        return (RegisterCompaniesConfig) section;
         }
 
         [ConfigurationProperty("Companies")]
