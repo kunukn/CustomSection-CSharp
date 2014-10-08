@@ -1,12 +1,12 @@
 ﻿using System.Configuration;
 
-namespace ConsoleApplication.Code.Example02
+namespace ConsoleApplication.Code.Example03
 {
 	public class CustomSection : ConfigurationSection
     {
         public static CustomSection GetConfig()
         {
-			var section  = ConfigurationManager.GetSection("example02");
+			var section  = ConfigurationManager.GetSection("example03");
 	        return (CustomSection) section;
         }
 

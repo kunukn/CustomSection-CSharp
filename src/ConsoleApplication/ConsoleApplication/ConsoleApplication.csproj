@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Example02\CustomSection.cs" />
+    <Compile Include="Code\Example03\CustomSection.cs" />
     <Compile Include="Code\Example01\CustomSection.cs" />
     <Compile Include="Code\Example04\CustomSection.cs" />
     <Compile Include="Program.cs" />
@@ -52,7 +52,7 @@
     <None Include="Configs\example01.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Configs\example02.config">
+    <None Include="Configs\example03.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Configs\example04.config">

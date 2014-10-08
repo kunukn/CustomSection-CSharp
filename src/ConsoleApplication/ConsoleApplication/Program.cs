@@ -1,6 +1,6 @@
 ﻿using System;
 using ConsoleApplication.Code.Example01;
-using ConsoleApplication.Code.Example02;
+using ConsoleApplication.Code.Example03;
 using ConsoleApplication.Code.Example04;
 
 namespace ConsoleApplication
@@ -16,12 +16,12 @@ namespace ConsoleApplication
 				Console.WriteLine(element as Code.Example01.CustomElement);
 			}
 			
-			Console.WriteLine("\nExample 02");
-			var example02 = Code.Example02.CustomSection.GetConfig();
-			Console.WriteLine("Id: {0}", example02.Id);
-			foreach (var element in example02.Companies)
+			Console.WriteLine("\nExample 03");
+			var example03 = Code.Example03.CustomSection.GetConfig();
+			Console.WriteLine("Id: {0}", example03.Id);
+			foreach (var element in example03.Companies)
 			{
-				Console.WriteLine(element as Code.Example02.CustomElement);
+				Console.WriteLine(element as Code.Example03.CustomElement);
 			}
 
 			Console.WriteLine("\nExample 04");
