@@ -24,7 +24,7 @@ Custom sections examples
 From http://stackoverflow.com/questions/1316058/how-to-create-custom-config-section-in-app-config
 
 ```
-<RegisterCompanies>
+<RegisterCompanies id="1">
    <Companies>
       <Company name="Tata Motors" code="Tata"/>
       <Company name="Honda Motors" code="Honda"/>
