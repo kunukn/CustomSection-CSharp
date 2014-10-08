@@ -8,40 +8,48 @@ http://msdn.microsoft.com/en-us/library/2tw134k3.aspx
 Custom sections examples
 ------------------------
 
-Example 1
+Example 1 - name value pair
 ```
-<myConfiguration>
-   <add name="name1" connectionName="conn1" fileDir="path1" baseUrl="baseUrl1" />
-   <add name="name2" connectionName="conn2" fileDir="path2" baseUrl="baseUrl2" />
-</myConfiguration>	
-```
-
-Example 2
-```
-<RegisterCompanies id="1">
-   <Companies>
-      <Company name="Tata Motors" code="Tata"/>
-      <Company name="Honda Motors" code="Honda"/>
-   </Companies>
-</RegisterCompanies>
+<example01>
+	<add key="key1" value="value1" />
+	<add key="key2" value="value2" />
+</example01>
 ```
 
-Example 3
+Example 2 - list of object
 ```
-<SiteSettings>
-	<site name="develop" smtp="smtp.develop.com" host="localhost">
+<example02>
+	<add name="name1" value="value1" type="type1" />
+	<add name="name2" value="value2" />
+</example02>
+```
+
+Example 3 - list of specified object
+```
+<example03 id="1">
+	<Companies>
+		<Company name="Google" code="googl"/>
+		<Company name="Apple" code="aapl"/>
+	</Companies>
+</example03>
+```
+
+Example 4 - multiple lists of specified object
+```
+<example04>
+	<site name="develop" smtp="smtp.develop.com" host="develop.com">
 		<mappings>
-			<membership name="name1" column="column1" />
-			<membership name="name2" column="column2" />
+			<membership name="name1" value="value1" />
+			<membership name="name2" value="value2" />
 		</mappings>
 	</site>
 	<site name="production" smtp="smtp.production.com" host="production.com">
 		<mappings>
-			<membership name="name3" column="column3" />
-			<membership name="name4" column="column4" />
+			<membership name="name3" value="value3" />
+			<membership name="name4" value="value4" />
 		</mappings>
 	</site>
-</SiteSettings>
+</example04>
 ```
 
 
