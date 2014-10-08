@@ -38,10 +38,10 @@ namespace ConsoleApplication.Code.Example04
 		{
 			name = name.ToLower();
 
-			for (int idx = 0; idx < base.Count; idx++)
+			for (int i = 0; i < base.Count; i++)
 			{
-				if (this[idx].Name.ToLower() == name)
-					return idx;
+				if (this[i].Name.ToLower() == name)
+					return i;
 			}
 
 			return -1;
@@ -124,10 +124,10 @@ namespace ConsoleApplication.Code.Example04
 		{
 			name = name.ToLower();
 
-			for (int idx = 0; idx < base.Count; idx++)
+			for (int i = 0; i < base.Count; i++)
 			{
-				if (this[idx].Name.ToLower() == name)
-					return idx;
+				if (this[i].Name.ToLower() == name)
+					return i;
 			}
 			return -1;
 		}
@@ -162,16 +162,16 @@ namespace ConsoleApplication.Code.Example04
 			set { this["name"] = value; }
 		}
 
-		[ConfigurationProperty("column", DefaultValue = "", IsRequired = true, IsKey = false)]
-		public string Column
+		[ConfigurationProperty("value", DefaultValue = "", IsRequired = false)]
+		public string Value
 		{
-			get { return (string)this["column"]; }
-			set { this["column"] = value; }
+			get { return (string)this["value"]; }
+			set { this["value"] = value; }
 		}
 
 		public override string ToString()
 		{
-			return string.Format("{0} {1}", Name, Column);
+			return string.Format("{0} {1}", Name, Value);
 		}
 	}
 }
