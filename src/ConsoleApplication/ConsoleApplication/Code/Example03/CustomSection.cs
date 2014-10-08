@@ -10,13 +10,13 @@ namespace ConsoleApplication.Code.Example03
 	        return (CustomSection) section;
         }
 
-        [ConfigurationProperty("Companies")]
-        [ConfigurationCollection(typeof(Companies), AddItemName = "Company")]
+        [ConfigurationProperty("companies")]
+        [ConfigurationCollection(typeof(Companies), AddItemName = "company")]
         public Companies Companies
         {
             get
             {
-                object o = this["Companies"];
+				object o = this["companies"];
                 return o as Companies ;
             }
         }
