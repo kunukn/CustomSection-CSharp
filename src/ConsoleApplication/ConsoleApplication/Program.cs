@@ -6,7 +6,14 @@ namespace ConsoleApplication
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Example 02");
+			Console.WriteLine("Example 01");
+			var example01 = Code.Example01.CustomSection.GetConfig();
+			foreach (var key in example01.AllKeys)
+			{
+				Console.WriteLine("{0} - {1}", key, example01[key]);
+			}
+
+			Console.WriteLine("\nExample 02");
 			var example02 = Code.Example02.CustomSection.GetConfig();
 			foreach (var element in example02.Customs)
 			{
