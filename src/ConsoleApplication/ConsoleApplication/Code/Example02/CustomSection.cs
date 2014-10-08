@@ -1,13 +1,13 @@
 ﻿using System.Configuration;
 
-namespace ConsoleApplication.Code.RegisterCompanies
+namespace ConsoleApplication.Code.Example02
 {
-	public class RegisterCompaniesConfig : ConfigurationSection
+	public class CustomSection : ConfigurationSection
     {
-        public static RegisterCompaniesConfig GetConfig()
+        public static CustomSection GetConfig()
         {
 			var section  = ConfigurationManager.GetSection("example02");
-	        return (RegisterCompaniesConfig) section;
+	        return (CustomSection) section;
         }
 
         [ConfigurationProperty("Companies")]

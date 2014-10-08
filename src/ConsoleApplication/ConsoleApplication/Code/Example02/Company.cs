@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace ConsoleApplication.Code.RegisterCompanies
+namespace ConsoleApplication.Code.Example02
 {
 	public class Company : ConfigurationElement
 	{

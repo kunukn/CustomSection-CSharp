@@ -1,6 +1,6 @@
 ﻿using System;
 using ConsoleApplication.Code.Example01;
-using ConsoleApplication.Code.RegisterCompanies;
+using ConsoleApplication.Code.Example02;
 using ConsoleApplication.Code.SiteSettings;
 
 namespace ConsoleApplication
@@ -9,22 +9,22 @@ namespace ConsoleApplication
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Example 1");
-			ConsoleApplication.Code.Example01.CustomSection example1 = ConsoleApplication.Code.Example01.CustomSection.GetConfig();
-			foreach (var element in example1.Customs)
+			Console.WriteLine("Example 01");
+			var example01 = Code.Example01.CustomSection.GetConfig();
+			foreach (var element in example01.Customs)
 			{
 				Console.WriteLine(element as CustomElement);
 			}
 			
-			Console.WriteLine("\nExample 2");
-			RegisterCompaniesConfig config = RegisterCompaniesConfig.GetConfig();
-			Console.WriteLine("Id: {0}", config.Id);
-			foreach (var element in config.Companies)
+			Console.WriteLine("\nExample 02");
+			var example02 = Code.Example02.CustomSection.GetConfig();
+			Console.WriteLine("Id: {0}", example02.Id);
+			foreach (var element in example02.Companies)
 			{
 				Console.WriteLine(element as Company);
 			}
 
-			Console.WriteLine("\nExample 3");
+			Console.WriteLine("\nExample 03");
 			SiteSection siteSection = SiteSection.GetConfig();
 
 			foreach (var site in siteSection.Sites)
@@ -38,7 +38,6 @@ namespace ConsoleApplication
 					{
 						var membershipElement = mapping as MembershipElement;
 						Console.WriteLine(membershipElement);
-
 					}
 				}
 			}
