@@ -27,10 +27,10 @@ Example 2 - list of object
 Example 3 - list of specified object
 ```
 <example03 id="1">
-	<Companies>
-		<Company name="Google" code="googl"/>
-		<Company name="Apple" code="aapl"/>
-	</Companies>
+	<companies>
+		<company name="Google" code="googl"/>
+		<company name="Apple" code="aapl"/>
+	</companies>
 </example03>
 ```
 
