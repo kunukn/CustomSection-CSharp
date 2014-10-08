@@ -52,4 +52,20 @@ Example 4 - multiple lists of specified object
 </example04>
 ```
 
+Example 5 - multiple lists of specified object
+```
+<example05 activeBranch="[BranchToggle]">
+	<toggles id="development-Q4">
+		<toggle name="Sell"   />
+		<toggle name="Stocks"  mode="disabled"  />
+	</toggles>
+	<toggles id="release-2016">
+		<toggle name="Search"  />
+		<toggle name="Sell"  mode="disabled"  />
+		<toggle name="Stocks"  mode="disabled"  />
+		<toggle name="Buy" mode="enabled" fromDate="31-01-2015" />
+	</toggles>
+</example05>
+```
+
 
