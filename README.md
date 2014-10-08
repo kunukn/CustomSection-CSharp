@@ -22,7 +22,6 @@ Custom sections examples
 
 
 From http://stackoverflow.com/questions/1316058/how-to-create-custom-config-section-in-app-config
-
 ```
 <RegisterCompanies id="1">
    <Companies>
@@ -31,5 +30,23 @@ From http://stackoverflow.com/questions/1316058/how-to-create-custom-config-sect
    </Companies>
 </RegisterCompanies>
 ```
+
+From http://www.thecodingforums.com/threads/nested-configurationelementcollections.118146/
+```
+<SiteSettings>
+	<site name="develop" smtp="smtp.develop.com" host="localhost">
+		<mappings>
+			<membership name="name1" column="column1" />
+			<membership name="name2" column="column2" />
+		</mappings>
+	</site>
+	<site name="production" smtp="smtp.production.com" host="production.com">
+		<mappings>
+			<membership name="name3" column="column3" />
+			<membership name="name4" column="column4" />
+		</mappings>
+	</site>
+</SiteSettings>
+	```
 
 
