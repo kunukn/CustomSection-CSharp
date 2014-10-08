@@ -27,28 +27,28 @@ Example 2 - list of object
 Example 3 - list of specified object
 ```
 <example03 id="1">
-	<Companies>
-		<Company name="Google" code="googl"/>
-		<Company name="Apple" code="aapl"/>
-	</Companies>
+	<companies>
+		<company name="Google" code="googl"/>
+		<company name="Apple" code="aapl"/>
+	</companies>
 </example03>
 ```
 
 Example 4 - multiple lists of specified object
 ```
 <example04>
-	<site name="develop" smtp="smtp.develop.com" host="develop.com">
-		<mappings>
-			<membership name="name1" value="value1" />
-			<membership name="name2" value="value2" />
-		</mappings>
-	</site>
-	<site name="production" smtp="smtp.production.com" host="production.com">
-		<mappings>
-			<membership name="name3" value="value3" />
-			<membership name="name4" value="value4" />
-		</mappings>
-	</site>
+	<item name="animals" area="land" host="asia">
+		<types>
+			<type name="elephant" value="100" />
+			<type name="tiger" value="50" />
+		</types>
+	</item>
+	<item name="people" area="water" host="africa">
+		<types>
+			<type name="surfer" value="200" />
+			<type name="sailor" value="300" />
+		</types>
+	</item>
 </example04>
 ```
 
