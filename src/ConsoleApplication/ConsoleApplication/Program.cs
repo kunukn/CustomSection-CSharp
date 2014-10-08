@@ -1,7 +1,4 @@
 ﻿using System;
-using ConsoleApplication.Code.Example01;
-using ConsoleApplication.Code.Example03;
-using ConsoleApplication.Code.Example04;
 
 namespace ConsoleApplication
 {
@@ -9,11 +6,11 @@ namespace ConsoleApplication
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Example 01");
-			var example01 = Code.Example01.CustomSection.GetConfig();
-			foreach (var element in example01.Customs)
+			Console.WriteLine("Example 02");
+			var example02 = Code.Example02.CustomSection.GetConfig();
+			foreach (var element in example02.Customs)
 			{
-				Console.WriteLine(element as Code.Example01.CustomElement);
+				Console.WriteLine(element as Code.Example02.CustomElement);
 			}
 			
 			Console.WriteLine("\nExample 03");
