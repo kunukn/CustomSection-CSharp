@@ -1,8 +1,8 @@
 ﻿using System.Configuration;
 
-namespace ConsoleApplication.Code.SiteSettings
+namespace ConsoleApplication.Code.Example03
 {
-	public class SiteSection : ConfigurationSection
+	public class CustomSection : ConfigurationSection
 	{
 		[ConfigurationProperty("", IsDefaultCollection = true)]
 		public SiteCollection Sites
@@ -10,10 +10,10 @@ namespace ConsoleApplication.Code.SiteSettings
 			get { return (SiteCollection)base[""]; }
 		}
 
-		public static SiteSection GetConfig()
+		public static CustomSection GetConfig()
 		{
 			var section = ConfigurationManager.GetSection("example03");
-			return (SiteSection)section;
+			return (CustomSection)section;
 		}
 	}
 

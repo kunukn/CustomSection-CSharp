@@ -1,7 +1,7 @@
 ﻿using System;
 using ConsoleApplication.Code.Example01;
 using ConsoleApplication.Code.Example02;
-using ConsoleApplication.Code.SiteSettings;
+using ConsoleApplication.Code.Example03;
 
 namespace ConsoleApplication
 {
@@ -25,7 +25,7 @@ namespace ConsoleApplication
 			}
 
 			Console.WriteLine("\nExample 03");
-			SiteSection siteSection = SiteSection.GetConfig();
+			var siteSection = Code.Example03.CustomSection.GetConfig();
 
 			foreach (var site in siteSection.Sites)
 			{
