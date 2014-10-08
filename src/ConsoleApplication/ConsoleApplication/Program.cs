@@ -1,7 +1,7 @@
 ﻿using System;
 using ConsoleApplication.Code.Example01;
 using ConsoleApplication.Code.Example02;
-using ConsoleApplication.Code.Example03;
+using ConsoleApplication.Code.Example04;
 
 namespace ConsoleApplication
 {
@@ -21,23 +21,22 @@ namespace ConsoleApplication
 			Console.WriteLine("Id: {0}", example02.Id);
 			foreach (var element in example02.Companies)
 			{
-				Console.WriteLine(element as Code.Example02.Company);
+				Console.WriteLine(element as Code.Example02.CustomElement);
 			}
 
-			Console.WriteLine("\nExample 03");
-			var example03 = Code.Example03.CustomSection.GetConfig();
+			Console.WriteLine("\nExample 04");
+			var example04 = Code.Example04.CustomSection.GetConfig();
 
-			foreach (var site in example03.Sites)
+			foreach (var site in example04.Sites)
 			{
-				var siteElement = site as Code.Example03.SiteElement;
-				Console.WriteLine(siteElement);
+				var element = site as Code.Example04.SiteElement;
+				Console.WriteLine(element);
 
-				if (siteElement != null)
+				if (element != null)
 				{
-					foreach (var mapping in siteElement.Mappings)
+					foreach (var mapping in element.Mappings)
 					{
-						var membershipElement = mapping as Code.Example03.MembershipElement;
-						Console.WriteLine(membershipElement);
+						Console.WriteLine(mapping as Code.Example04.MembershipElement);
 					}
 				}
 			}

@@ -30,25 +30,25 @@ namespace ConsoleApplication.Code.Example02
 
 	public class Companies : ConfigurationElementCollection
 	{
-		public Company this[int index]
+		public CustomElement this[int index]
 		{
 			get
 			{
-				return base.BaseGet(index) as Company;
+				return BaseGet(index) as CustomElement;
 			}
 			set
 			{
-				if (base.BaseGet(index) != null)
+				if (BaseGet(index) != null)
 				{
-					base.BaseRemoveAt(index);
+					BaseRemoveAt(index);
 				}
-				this.BaseAdd(index, value);
+				BaseAdd(index, value);
 			}
 		}
 
-		public new Company this[string responseString]
+		public new CustomElement this[string responseString]
 		{
-			get { return (Company)BaseGet(responseString); }
+			get { return (CustomElement)BaseGet(responseString); }
 			set
 			{
 				if (BaseGet(responseString) != null)
@@ -59,18 +59,18 @@ namespace ConsoleApplication.Code.Example02
 			}
 		}
 
-		protected override System.Configuration.ConfigurationElement CreateNewElement()
+		protected override ConfigurationElement CreateNewElement()
 		{
-			return new Company();
+			return new CustomElement();
 		}
 
-		protected override object GetElementKey(System.Configuration.ConfigurationElement element)
+		protected override object GetElementKey(ConfigurationElement element)
 		{
-			return ((Company)element).Name;
+			return ((CustomElement)element).Name;
 		}
 	}
 
-	public class Company : ConfigurationElement
+	public class CustomElement : ConfigurationElement
 	{
 
 		[ConfigurationProperty("name", IsRequired = true)]

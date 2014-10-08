@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace ConsoleApplication.Code.Example03
+namespace ConsoleApplication.Code.Example04
 {
 	public class CustomSection : ConfigurationSection
 	{
@@ -12,7 +12,7 @@ namespace ConsoleApplication.Code.Example03
 
 		public static CustomSection GetConfig()
 		{
-			var section = ConfigurationManager.GetSection("example03");
+			var section = ConfigurationManager.GetSection("example04");
 			return (CustomSection)section;
 		}
 	}
