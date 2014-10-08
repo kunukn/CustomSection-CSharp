@@ -5,7 +5,7 @@ namespace ConsoleApplication.Code.Example05
 	public class CustomSection : ConfigurationSection
 	{
 		[ConfigurationProperty("", IsDefaultCollection = true)]
-		public TogglesCollection Toggleses
+		public TogglesCollection Toggles
 		{
 			get { return (TogglesCollection)base[""]; }
 		}
