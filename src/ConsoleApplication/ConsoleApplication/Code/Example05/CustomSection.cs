@@ -111,10 +111,10 @@ namespace ConsoleApplication.Code.Example05
 			get { return (string)this["name"]; }
 		}
 
-		[ConfigurationProperty("type", DefaultValue = "", IsRequired = false)]
-		public string Type
+		[ConfigurationProperty("mode", DefaultValue = "disabled", IsRequired = false)]
+		public string Mode
 		{
-			get { return (string)this["type"]; }
+			get { return (string)this["mode"]; }
 		}
 
 		[ConfigurationProperty("fromDate", DefaultValue = "", IsRequired = false)]
@@ -125,7 +125,7 @@ namespace ConsoleApplication.Code.Example05
 
 		public override string ToString()
 		{
-			return string.Format("{0} {1} {2}", Name, Type, FromDate);
+			return string.Format("{0} {1} {2}", Name, Mode, FromDate);
 		}
 	}
 }
