@@ -71,7 +71,7 @@ namespace ConsoleApplication.Code.SiteSettings
 			set { this["name"] = value; }
 		}
 
-		[ConfigurationProperty("smtp", DefaultValue = "mail.arcabama.com", IsRequired = true, IsKey = false)]
+		[ConfigurationProperty("smtp", DefaultValue = "mail.develop.com", IsRequired = true, IsKey = false)]
 		public string SmtpServer
 		{
 			get { return (string)this["smtp"]; }

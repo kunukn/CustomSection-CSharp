@@ -26,7 +26,8 @@ namespace ConsoleApplication
 			}
 
 			Console.WriteLine("\nExample 3");
-			var siteSection = (SiteSection)System.Configuration.ConfigurationManager.GetSection("SiteSettings");
+			var siteSection = (SiteSection)System.Configuration.ConfigurationManager.GetSection("SiteSettings");			
+
 			foreach (var site in siteSection.Sites)
 			{
 				var siteElement = site as SiteElement;
