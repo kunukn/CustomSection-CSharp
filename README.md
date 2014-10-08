@@ -1,11 +1,11 @@
-CustomSection CSharp
+Custom Sections in config file
 ====================
 
 How to: Create Custom Configuration Sections Using ConfigurationSection
 
 http://msdn.microsoft.com/en-us/library/2tw134k3.aspx
 
-Custom sections examples
+Code examples of parsing data from custom sections in a config file
 ------------------------
 
 Example 1 - name value pair
