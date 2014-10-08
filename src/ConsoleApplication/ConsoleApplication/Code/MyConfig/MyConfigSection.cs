@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace ConsoleApplication
+namespace ConsoleApplication.Code.MyConfig
 {
 	public class MyConfigSection : ConfigurationSection
 	{

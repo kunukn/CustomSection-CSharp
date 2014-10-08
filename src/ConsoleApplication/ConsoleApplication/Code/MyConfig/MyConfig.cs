@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConsoleApplication
+namespace ConsoleApplication.Code.MyConfig
 {
 	public class MyConfig
 	{
