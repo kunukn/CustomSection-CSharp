@@ -54,7 +54,7 @@
     <None Include="example01.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="SiteSettings.config">
+    <None Include="example03.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="example02.config">

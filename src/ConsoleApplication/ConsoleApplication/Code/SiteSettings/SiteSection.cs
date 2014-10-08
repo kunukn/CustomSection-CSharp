@@ -9,6 +9,12 @@ namespace ConsoleApplication.Code.SiteSettings
 		{
 			get { return (SiteCollection)base[""]; }
 		}
+
+		public static SiteSection GetConfig()
+		{
+			var section = ConfigurationManager.GetSection("example03");
+			return (SiteSection)section;
+		}
 	}
 
 	public class SiteCollection : ConfigurationElementCollection

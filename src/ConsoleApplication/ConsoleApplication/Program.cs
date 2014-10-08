@@ -10,23 +10,22 @@ namespace ConsoleApplication
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Example 1");
-			var example1 = CustomSection.GetConfig();
+			ConsoleApplication.Code.Example01.CustomSection example1 = ConsoleApplication.Code.Example01.CustomSection.GetConfig();
 			foreach (var element in example1.Customs)
 			{
 				Console.WriteLine(element as CustomElement);
 			}
 			
 			Console.WriteLine("\nExample 2");
-			var config = RegisterCompaniesConfig.GetConfig();
+			RegisterCompaniesConfig config = RegisterCompaniesConfig.GetConfig();
 			Console.WriteLine("Id: {0}", config.Id);
-			foreach (var item in config.Companies)
+			foreach (var element in config.Companies)
 			{
-				var company = (Company)item;
-				Console.WriteLine(company);
+				Console.WriteLine(element as Company);
 			}
 
 			Console.WriteLine("\nExample 3");
-			var siteSection = (SiteSection)System.Configuration.ConfigurationManager.GetSection("SiteSettings");			
+			SiteSection siteSection = SiteSection.GetConfig();
 
 			foreach (var site in siteSection.Sites)
 			{
