@@ -5,7 +5,7 @@ How to: Create Custom Configuration Sections Using ConfigurationSection
 
 http://msdn.microsoft.com/en-us/library/2tw134k3.aspx
 
-Code examples of parsing data from custom sections in a config file
+Code samples of parsing data from custom sections
 ------------------------
 
 Example 1 - name value pair
