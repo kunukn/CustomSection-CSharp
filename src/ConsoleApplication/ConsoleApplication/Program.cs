@@ -24,9 +24,9 @@ namespace ConsoleApplication
 			Console.WriteLine("\nExample 03");
 			Code.Example03.CustomSection example03 = Code.Example03.CustomSection.GetConfig();
 			Console.WriteLine("Id: {0}", example03.Id);
-			foreach (var element in example03.Companies)
+			foreach (var company in example03.Companies)
 			{
-				Console.WriteLine(element as Code.Example03.CustomElement);
+				Console.WriteLine(company as Code.Example03.CompanyElement);
 			}
 
 			Console.WriteLine("\nExample 04");

@@ -30,11 +30,11 @@ namespace ConsoleApplication.Code.Example03
 
 	public class Companies : ConfigurationElementCollection
 	{
-		public CustomElement this[int index]
+		public CompanyElement this[int index]
 		{
 			get
 			{
-				return BaseGet(index) as CustomElement;
+				return BaseGet(index) as CompanyElement;
 			}
 			set
 			{
@@ -46,9 +46,9 @@ namespace ConsoleApplication.Code.Example03
 			}
 		}
 
-		public new CustomElement this[string responseString]
+		public new CompanyElement this[string responseString]
 		{
-			get { return (CustomElement)BaseGet(responseString); }
+			get { return (CompanyElement)BaseGet(responseString); }
 			set
 			{
 				if (BaseGet(responseString) != null)
@@ -61,16 +61,16 @@ namespace ConsoleApplication.Code.Example03
 
 		protected override ConfigurationElement CreateNewElement()
 		{
-			return new CustomElement();
+			return new CompanyElement();
 		}
 
 		protected override object GetElementKey(ConfigurationElement element)
 		{
-			return ((CustomElement)element).Name;
+			return ((CompanyElement)element).Name;
 		}
 	}
 
-	public class CustomElement : ConfigurationElement
+	public class CompanyElement : ConfigurationElement
 	{
 
 		[ConfigurationProperty("name", IsRequired = true)]
