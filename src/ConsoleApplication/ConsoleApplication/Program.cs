@@ -39,9 +39,9 @@ namespace ConsoleApplication
 
 				if (element != null)
 				{
-					foreach (var mapping in element.Types)
+					foreach (var type in element.Types)
 					{
-						Console.WriteLine("  {0}", (mapping as Code.Example04.TypeElement));
+						Console.WriteLine("  {0}", (type as Code.Example04.TypeElement));
 					}
 				}
 			}
@@ -52,14 +52,14 @@ namespace ConsoleApplication
 
 			foreach (var site in example05.Toggles)
 			{
-				var element = site as Code.Example05.TogglesElement;
-				Console.WriteLine(element);
+				var toggles = site as Code.Example05.TogglesElement;
+				Console.WriteLine(toggles);
 
-				if (element != null)
+				if (toggles != null)
 				{
-					foreach (var mapping in element)
+					foreach (var toggle in toggles)
 					{
-						Console.WriteLine("  {0}", (mapping as Code.Example05.ToggleElement));
+						Console.WriteLine("  {0}", (toggle as Code.Example05.ToggleElement));
 					}
 				}
 			}
