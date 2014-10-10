@@ -78,30 +78,7 @@ namespace ConsoleApplication.Code.Example05
 		{
 			return string.Format("{0}", Id);
 		}
-	}
-
-	public class TogglezzCollection : ConfigurationElementCollection
-	{		
-		public override ConfigurationElementCollectionType CollectionType
-		{
-			get { return ConfigurationElementCollectionType.BasicMap; }
-		}
-
-		protected override ConfigurationElement CreateNewElement()
-		{
-			return new ToggleElement();
-		}
-
-		protected override object GetElementKey(ConfigurationElement element)
-		{
-			return ((ToggleElement)element).Name;
-		}
-
-		protected override string ElementName
-		{
-			get { return "toggle"; }
-		}
-	}
+	}	
 
 	public class ToggleElement : ConfigurationElement
 	{
