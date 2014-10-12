@@ -71,3 +71,5 @@ Example 5 - multiple lists of specified object
 ```
 
 
+http://kunuk.wordpress.com/2014/10/12/custom-configuration-section-samples-csharp/
+
