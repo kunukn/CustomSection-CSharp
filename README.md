@@ -32,6 +32,7 @@ Example 3 - list of specified object
 	<companies>
 		<company name="Google" code="googl"/>
 		<company name="Apple" code="aapl"/>
+		<company name="Microsoft" code="msft"/>
 	</companies>
 </example03>
 ```
